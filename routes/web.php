@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\CargosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth']], function() {
+    Route::group(['prefix' => 'admin'], function() {
+        Route::get('/',[App\Http\Controllers\HomeController::class,'index']);
+        Route::resource('cargo',CargosController::class);
+
+    });
+});
+
