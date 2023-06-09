@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Cargo;
+use App\Models\Regimene;
 
-class CargosController extends Controller
+class RegimenesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $cargos= Cargo::orderBy('id','DESC')->paginate(10);
-        return view('admin.cargos.index',compact('cargos'));
+        $regimenes= Regimene::orderBy('id','DESC')->paginate(10);
+        return view('admin.regimenes.index',compact('regimenes'));
     }
 
     /**

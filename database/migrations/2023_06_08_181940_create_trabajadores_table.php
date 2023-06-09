@@ -19,10 +19,8 @@ return new class extends Migration
             $table->string('apellido_m');
             $table->unsignedBigInteger('cargos_id')->nullable();
             $table->foreign('cargos_id')->references('id')->on('cargos');
-            
-            // $table->foreign('cargos_id')->references('id')->on('cargos');
-            // $table->integer('regimen_id');
-            // $table->foreign('regimen_id')->references('id')->on('regimen');
+            $table->unsignedBigInteger('regimenes_id')->nullable();
+            $table->foreign('regimenes_id')->references('id')->on('regimenes');
             $table->timestamps();
         });
     }

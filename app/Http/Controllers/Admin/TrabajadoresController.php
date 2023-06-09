@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Trabajadore;
 use App\Models\Cargo;
-
-class CargosController extends Controller
+class TrabajadoresController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $cargos= Cargo::orderBy('id','DESC')->paginate(10);
-        return view('admin.cargos.index',compact('cargos'));
+       $trabajadores = Trabajadore::with('Cargos','Regimenes')->paginate(10);
+        return view('admin.trabajadores.index', compact('trabajadores'));
     }
 
     /**
