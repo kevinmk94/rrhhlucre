@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CargosController;
 use App\Http\Controllers\Admin\RegimenesController;
 use App\Http\Controllers\Admin\TrabajadoresController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
     Route::group(['prefix' => 'admin'], function() {
-        Route::get('/',[App\Http\Controllers\HomeController::class,'index']);
+        Route::resource('/',HomeController::class);
         Route::resource('cargos',CargosController::class);
         Route::resource('regimenes',RegimenesController::class);
         Route::resource('trabajadores',TrabajadoresController::class);
