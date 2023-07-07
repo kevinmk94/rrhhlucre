@@ -22,7 +22,7 @@ class TrabajadoresController extends Controller
      */
     public function create()
     {
-        //
+       
     }
 
     /**
