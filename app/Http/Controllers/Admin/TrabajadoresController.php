@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Trabajadore;
+use App\Models\Regimene;
 use App\Models\Cargo;
+
 class TrabajadoresController extends Controller
 {
     /**
@@ -22,7 +24,10 @@ class TrabajadoresController extends Controller
      */
     public function create()
     {
-       
+        $regimenes= Regimene::all();
+        $cargos= Cargo::all();
+        $trabajadores= Trabajadore::all();
+        return view('admin.trabajadores.nuevo',compact('trabajadores', 'regimenes','cargos'));
     }
 
     /**
@@ -30,7 +35,18 @@ class TrabajadoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nombre_regimen=Trabajadore::create([
+
+            'dni'=>$request->dni,
+            'nombres'=>$request->nombres,
+            'apellido_p'=>$request->apellido_p,
+            'apellido_m'=>$request->apellido_m,
+            'cargos_id'=>$request->cargos_id,
+            'regimenes_id'=>$request->regimenes_id,
+
+        ]);
+
+        return redirect()->action('App\Http\Controllers\Admin\TrabajadoresController@index');
     }
 
     /**

@@ -22,7 +22,8 @@ class RegimenesController extends Controller
      */
     public function create()
     {
-        //
+        $regimenes= Regimene::orderBy('id','DESC')->paginate(10);
+        return view('admin.regimenes.nuevo',compact('regimenes'));
     }
 
     /**
@@ -30,7 +31,11 @@ class RegimenesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nombre_regimen=Regimene::create([
+            'nombre_regimen'=> $request->nombre_regimen,
+        ]);
+
+        return redirect()->action('App\Http\Controllers\Admin\RegimenesController@index');
     }
 
     /**

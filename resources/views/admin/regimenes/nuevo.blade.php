@@ -3,19 +3,19 @@
     <!--begin::Card-->
         <div class="card card-custom example example-compact">
             <div class="card-header">
-                <h3 class="card-title">Creación de nuevo cliente   </h3>
+                <h3 class="card-title">Creación de nuevo REGIMENES   </h3>
             </div>
             <!--begin::Form-->
-            <form class="form" method="POST" action="{{ url('') }}/admin/cargos" enctype="multipart/form-data">
+            <form class="form" method="POST" action="{{ url('') }}/admin/regimenes" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
-                    <h3 class="font-size-lg text-dark font-weight-bold mb-6">1. Cliente:</h3>
+                    <h3 class="font-size-lg text-dark font-weight-bold mb-6">1. REGIMENES:</h3>
                     <div class="mb-15">
                         {{--    --}}
                         <div class="form-group row">
-                            <label class="col-lg-3 col-form-label text-right">cargos:</label>
+                            <label class="col-lg-3 col-form-label text-right">REGIMENES:</label>
                             <div class="col-lg-6">
-                                <input type="text" name="cargos" class="form-control" placeholder="Ingresa el nombres" value="{{ old('cargos') }}" required />
+                                <input type="text" name="nombre_regimen" class="form-control" placeholder="Ingresa el nombres" value="{{ old('cargos') }}" required />
                                 {{-- @error('rfc')
                                     <div class="custom-invalid-feedback">{{ $message }}</div>
                                 @enderror --}}

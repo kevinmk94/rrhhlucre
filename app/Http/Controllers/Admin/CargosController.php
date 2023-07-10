@@ -22,7 +22,8 @@ class CargosController extends Controller
      */
     public function create()
     {
-        //
+        $cargos= Cargo::orderBy('id','DESC')->paginate(10);
+        return view('admin.cargos.nuevo',compact('cargos'));
     }
 
     /**
@@ -30,7 +31,11 @@ class CargosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cargo=Cargo::create([
+            'nombre_cargo'=> $request->cargos,
+        ]);
+
+        return redirect()->action('App\Http\Controllers\Admin\CargosController@index');
     }
 
     /**
