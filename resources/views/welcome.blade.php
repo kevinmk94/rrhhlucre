@@ -1,760 +1,602 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Insure - Insurance HTML Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+      <head>
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="{{ url('') }}/theme/inicio/lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="{{ url('') }}/theme/inicio/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+        <title>Recursos Humanos Municipalidad Distrital de Lucre</title>
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ url('') }}/theme/inicio/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
-    <link href="{{ url('') }}/theme/inicio/css/style.css" rel="stylesheet" />
-  </head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div class="spinner-grow text-primary" role="status"></div>
-    </div>
-    <!-- Spinner End -->
-    <!-- Page Header Start -->
-    <div
-      class="container-fluid page-header py-5 mb-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <h1 class="display-4 animated slideInDown mb-4">Recursos Humanos</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item">
-                @if (Route::has('login'))
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="{{ url('') }}/theme/inicio/assets/css/fontawesome.css">
+        <link rel="stylesheet" href="{{ url('') }}/theme/inicio/assets/css/templatemo-574-mexant.css">
+        <link rel="stylesheet" href="{{ url('') }}/theme/inicio/assets/css/owl.css">
+        <link rel="stylesheet" href="{{ url('') }}/theme/inicio/assets/css/animate.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!--
 
-                @auth
-                    <a href="{{ url('/admin') }}" class="btn btn-primary px-3 d-none d-lg-block" style="color:white;"> Admin </a>
-                @else
-                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+    TemplateMo 574 Mexant
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                    @endif
-                @endauth
+    https://templatemo.com/tm-574-mexant
 
-           @endif
-            </li>
+    -->
+      </head>
 
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <!-- Page Header End -->
-    <!-- Table Start -->
-    <table id="example" class="display" style="width:100%">
-      <thead>
-          <tr>
-              <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Tiger Nixon</td>
-              <td>System Architect</td>
-              <td>Edinburgh</td>
-              <td>61</td>
-              <td>2011-04-25</td>
-              <td>$320,800</td>
-          </tr>
-          <tr>
-              <td>Garrett Winters</td>
-              <td>Accountant</td>
-              <td>Tokyo</td>
-              <td>63</td>
-              <td>2011-07-25</td>
-              <td>$170,750</td>
-          </tr>
-          <tr>
-              <td>Ashton Cox</td>
-              <td>Junior Technical Author</td>
-              <td>San Francisco</td>
-              <td>66</td>
-              <td>2009-01-12</td>
-              <td>$86,000</td>
-          </tr>
-          <tr>
-              <td>Cedric Kelly</td>
-              <td>Senior Javascript Developer</td>
-              <td>Edinburgh</td>
-              <td>22</td>
-              <td>2012-03-29</td>
-              <td>$433,060</td>
-          </tr>
-          <tr>
-              <td>Airi Satou</td>
-              <td>Accountant</td>
-              <td>Tokyo</td>
-              <td>33</td>
-              <td>2008-11-28</td>
-              <td>$162,700</td>
-          </tr>
-          <tr>
-              <td>Brielle Williamson</td>
-              <td>Integration Specialist</td>
-              <td>New York</td>
-              <td>61</td>
-              <td>2012-12-02</td>
-              <td>$372,000</td>
-          </tr>
-          <tr>
-              <td>Herrod Chandler</td>
-              <td>Sales Assistant</td>
-              <td>San Francisco</td>
-              <td>59</td>
-              <td>2012-08-06</td>
-              <td>$137,500</td>
-          </tr>
-          <tr>
-              <td>Rhona Davidson</td>
-              <td>Integration Specialist</td>
-              <td>Tokyo</td>
-              <td>55</td>
-              <td>2010-10-14</td>
-              <td>$327,900</td>
-          </tr>
-          <tr>
-              <td>Colleen Hurst</td>
-              <td>Javascript Developer</td>
-              <td>San Francisco</td>
-              <td>39</td>
-              <td>2009-09-15</td>
-              <td>$205,500</td>
-          </tr>
-          <tr>
-              <td>Sonya Frost</td>
-              <td>Software Engineer</td>
-              <td>Edinburgh</td>
-              <td>23</td>
-              <td>2008-12-13</td>
-              <td>$103,600</td>
-          </tr>
-          <tr>
-              <td>Jena Gaines</td>
-              <td>Office Manager</td>
-              <td>London</td>
-              <td>30</td>
-              <td>2008-12-19</td>
-              <td>$90,560</td>
-          </tr>
-          <tr>
-              <td>Quinn Flynn</td>
-              <td>Support Lead</td>
-              <td>Edinburgh</td>
-              <td>22</td>
-              <td>2013-03-03</td>
-              <td>$342,000</td>
-          </tr>
-          <tr>
-              <td>Charde Marshall</td>
-              <td>Regional Director</td>
-              <td>San Francisco</td>
-              <td>36</td>
-              <td>2008-10-16</td>
-              <td>$470,600</td>
-          </tr>
-          <tr>
-              <td>Haley Kennedy</td>
-              <td>Senior Marketing Designer</td>
-              <td>London</td>
-              <td>43</td>
-              <td>2012-12-18</td>
-              <td>$313,500</td>
-          </tr>
-          <tr>
-              <td>Tatyana Fitzpatrick</td>
-              <td>Regional Director</td>
-              <td>London</td>
-              <td>19</td>
-              <td>2010-03-17</td>
-              <td>$385,750</td>
-          </tr>
-          <tr>
-              <td>Michael Silva</td>
-              <td>Marketing Designer</td>
-              <td>London</td>
-              <td>66</td>
-              <td>2012-11-27</td>
-              <td>$198,500</td>
-          </tr>
-          <tr>
-              <td>Paul Byrd</td>
-              <td>Chief Financial Officer (CFO)</td>
-              <td>New York</td>
-              <td>64</td>
-              <td>2010-06-09</td>
-              <td>$725,000</td>
-          </tr>
-          <tr>
-              <td>Gloria Little</td>
-              <td>Systems Administrator</td>
-              <td>New York</td>
-              <td>59</td>
-              <td>2009-04-10</td>
-              <td>$237,500</td>
-          </tr>
-          <tr>
-              <td>Bradley Greer</td>
-              <td>Software Engineer</td>
-              <td>London</td>
-              <td>41</td>
-              <td>2012-10-13</td>
-              <td>$132,000</td>
-          </tr>
-          <tr>
-              <td>Dai Rios</td>
-              <td>Personnel Lead</td>
-              <td>Edinburgh</td>
-              <td>35</td>
-              <td>2012-09-26</td>
-              <td>$217,500</td>
-          </tr>
-          <tr>
-              <td>Jenette Caldwell</td>
-              <td>Development Lead</td>
-              <td>New York</td>
-              <td>30</td>
-              <td>2011-09-03</td>
-              <td>$345,000</td>
-          </tr>
-          <tr>
-              <td>Yuri Berry</td>
-              <td>Chief Marketing Officer (CMO)</td>
-              <td>New York</td>
-              <td>40</td>
-              <td>2009-06-25</td>
-              <td>$675,000</td>
-          </tr>
-          <tr>
-              <td>Caesar Vance</td>
-              <td>Pre-Sales Support</td>
-              <td>New York</td>
-              <td>21</td>
-              <td>2011-12-12</td>
-              <td>$106,450</td>
-          </tr>
-          <tr>
-              <td>Doris Wilder</td>
-              <td>Sales Assistant</td>
-              <td>Sydney</td>
-              <td>23</td>
-              <td>2010-09-20</td>
-              <td>$85,600</td>
-          </tr>
-          <tr>
-              <td>Angelica Ramos</td>
-              <td>Chief Executive Officer (CEO)</td>
-              <td>London</td>
-              <td>47</td>
-              <td>2009-10-09</td>
-              <td>$1,200,000</td>
-          </tr>
-          <tr>
-              <td>Gavin Joyce</td>
-              <td>Developer</td>
-              <td>Edinburgh</td>
-              <td>42</td>
-              <td>2010-12-22</td>
-              <td>$92,575</td>
-          </tr>
-          <tr>
-              <td>Jennifer Chang</td>
-              <td>Regional Director</td>
-              <td>Singapore</td>
-              <td>28</td>
-              <td>2010-11-14</td>
-              <td>$357,650</td>
-          </tr>
-          <tr>
-              <td>Brenden Wagner</td>
-              <td>Software Engineer</td>
-              <td>San Francisco</td>
-              <td>28</td>
-              <td>2011-06-07</td>
-              <td>$206,850</td>
-          </tr>
-          <tr>
-              <td>Fiona Green</td>
-              <td>Chief Operating Officer (COO)</td>
-              <td>San Francisco</td>
-              <td>48</td>
-              <td>2010-03-11</td>
-              <td>$850,000</td>
-          </tr>
-          <tr>
-              <td>Shou Itou</td>
-              <td>Regional Marketing</td>
-              <td>Tokyo</td>
-              <td>20</td>
-              <td>2011-08-14</td>
-              <td>$163,000</td>
-          </tr>
-          <tr>
-              <td>Michelle House</td>
-              <td>Integration Specialist</td>
-              <td>Sydney</td>
-              <td>37</td>
-              <td>2011-06-02</td>
-              <td>$95,400</td>
-          </tr>
-          <tr>
-              <td>Suki Burks</td>
-              <td>Developer</td>
-              <td>London</td>
-              <td>53</td>
-              <td>2009-10-22</td>
-              <td>$114,500</td>
-          </tr>
-          <tr>
-              <td>Prescott Bartlett</td>
-              <td>Technical Author</td>
-              <td>London</td>
-              <td>27</td>
-              <td>2011-05-07</td>
-              <td>$145,000</td>
-          </tr>
-          <tr>
-              <td>Gavin Cortez</td>
-              <td>Team Leader</td>
-              <td>San Francisco</td>
-              <td>22</td>
-              <td>2008-10-26</td>
-              <td>$235,500</td>
-          </tr>
-          <tr>
-              <td>Martena Mccray</td>
-              <td>Post-Sales support</td>
-              <td>Edinburgh</td>
-              <td>46</td>
-              <td>2011-03-09</td>
-              <td>$324,050</td>
-          </tr>
-          <tr>
-              <td>Unity Butler</td>
-              <td>Marketing Designer</td>
-              <td>San Francisco</td>
-              <td>47</td>
-              <td>2009-12-09</td>
-              <td>$85,675</td>
-          </tr>
-          <tr>
-              <td>Howard Hatfield</td>
-              <td>Office Manager</td>
-              <td>San Francisco</td>
-              <td>51</td>
-              <td>2008-12-16</td>
-              <td>$164,500</td>
-          </tr>
-          <tr>
-              <td>Hope Fuentes</td>
-              <td>Secretary</td>
-              <td>San Francisco</td>
-              <td>41</td>
-              <td>2010-02-12</td>
-              <td>$109,850</td>
-          </tr>
-          <tr>
-              <td>Vivian Harrell</td>
-              <td>Financial Controller</td>
-              <td>San Francisco</td>
-              <td>62</td>
-              <td>2009-02-14</td>
-              <td>$452,500</td>
-          </tr>
-          <tr>
-              <td>Timothy Mooney</td>
-              <td>Office Manager</td>
-              <td>London</td>
-              <td>37</td>
-              <td>2008-12-11</td>
-              <td>$136,200</td>
-          </tr>
-          <tr>
-              <td>Jackson Bradshaw</td>
-              <td>Director</td>
-              <td>New York</td>
-              <td>65</td>
-              <td>2008-09-26</td>
-              <td>$645,750</td>
-          </tr>
-          <tr>
-              <td>Olivia Liang</td>
-              <td>Support Engineer</td>
-              <td>Singapore</td>
-              <td>64</td>
-              <td>2011-02-03</td>
-              <td>$234,500</td>
-          </tr>
-          <tr>
-              <td>Bruno Nash</td>
-              <td>Software Engineer</td>
-              <td>London</td>
-              <td>38</td>
-              <td>2011-05-03</td>
-              <td>$163,500</td>
-          </tr>
-          <tr>
-              <td>Sakura Yamamoto</td>
-              <td>Support Engineer</td>
-              <td>Tokyo</td>
-              <td>37</td>
-              <td>2009-08-19</td>
-              <td>$139,575</td>
-          </tr>
-          <tr>
-              <td>Thor Walton</td>
-              <td>Developer</td>
-              <td>New York</td>
-              <td>61</td>
-              <td>2013-08-11</td>
-              <td>$98,540</td>
-          </tr>
-          <tr>
-              <td>Finn Camacho</td>
-              <td>Support Engineer</td>
-              <td>San Francisco</td>
-              <td>47</td>
-              <td>2009-07-07</td>
-              <td>$87,500</td>
-          </tr>
-          <tr>
-              <td>Serge Baldwin</td>
-              <td>Data Coordinator</td>
-              <td>Singapore</td>
-              <td>64</td>
-              <td>2012-04-09</td>
-              <td>$138,575</td>
-          </tr>
-          <tr>
-              <td>Zenaida Frank</td>
-              <td>Software Engineer</td>
-              <td>New York</td>
-              <td>63</td>
-              <td>2010-01-04</td>
-              <td>$125,250</td>
-          </tr>
-          <tr>
-              <td>Zorita Serrano</td>
-              <td>Software Engineer</td>
-              <td>San Francisco</td>
-              <td>56</td>
-              <td>2012-06-01</td>
-              <td>$115,000</td>
-          </tr>
-          <tr>
-              <td>Jennifer Acosta</td>
-              <td>Junior Javascript Developer</td>
-              <td>Edinburgh</td>
-              <td>43</td>
-              <td>2013-02-01</td>
-              <td>$75,650</td>
-          </tr>
-          <tr>
-              <td>Cara Stevens</td>
-              <td>Sales Assistant</td>
-              <td>New York</td>
-              <td>46</td>
-              <td>2011-12-06</td>
-              <td>$145,600</td>
-          </tr>
-          <tr>
-              <td>Hermione Butler</td>
-              <td>Regional Director</td>
-              <td>London</td>
-              <td>47</td>
-              <td>2011-03-21</td>
-              <td>$356,250</td>
-          </tr>
-          <tr>
-              <td>Lael Greer</td>
-              <td>Systems Administrator</td>
-              <td>London</td>
-              <td>21</td>
-              <td>2009-02-27</td>
-              <td>$103,500</td>
-          </tr>
-          <tr>
-              <td>Jonas Alexander</td>
-              <td>Developer</td>
-              <td>San Francisco</td>
-              <td>30</td>
-              <td>2010-07-14</td>
-              <td>$86,500</td>
-          </tr>
-          <tr>
-              <td>Shad Decker</td>
-              <td>Regional Director</td>
-              <td>Edinburgh</td>
-              <td>51</td>
-              <td>2008-11-13</td>
-              <td>$183,000</td>
-          </tr>
-          <tr>
-              <td>Michael Bruce</td>
-              <td>Javascript Developer</td>
-              <td>Singapore</td>
-              <td>29</td>
-              <td>2011-06-27</td>
-              <td>$183,000</td>
-          </tr>
-          <tr>
-              <td>Donna Snider</td>
-              <td>Customer Support</td>
-              <td>New York</td>
-              <td>27</td>
-              <td>2011-01-25</td>
-              <td>$112,000</td>
-          </tr>
-      </tbody>
-      <tfoot>
-          <tr>
-              <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
-          </tr>
-      </tfoot>
-  </table>
-   
-   
-           
-    
-    <!-- Table End -->
-    <!-- Features Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <h1 class="display-6 mb-5">Few Reasons Why People Choosing Us!</h1>
-            <p class="mb-4">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet
-            </p>
-            <div class="row g-3">
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="bg-light rounded h-100 p-3">
-                  <div
-                    class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3"
-                  >
-                    <img
-                      class="align-self-center mb-3"
-                      src="img/icon/icon-06-primary.png"
-                      alt=""
-                    />
-                    <h5 class="mb-0">Easy Process</h5>
+    <body>
+      <!-- ***** Header Area Start ***** -->
+      <header class="header-area header-sticky">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12">
+                      <nav class="main-nav">
+                          <!-- ***** Logo Start ***** -->
+                          <a href="index.html" class="logo">
+                              <img src="{{ url('') }}/theme/inicio/assets/images/logo.png" alt="">
+
+                          </a>
+                          <!-- ***** Logo End ***** -->
+                          <!-- ***** Menu Start ***** -->
+                          <ul class="nav">
+                              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                              <li class="scroll-to-section"><a href="#services">Services</a></li>
+                              <li class="scroll-to-section"><a href="#about">About</a></li>
+                              <li class="has-sub">
+                                  <a href="javascript:void(0)">Pages</a>
+                                  <ul class="sub-menu">
+                                      <li><a href="about-us.html">About Us</a></li>
+                                      <li><a href="our-services.html">Our Services</a></li>
+                                      <li><a href="contact-us.html">Contact Us</a></li>
+                                  </ul>
+                              </li>
+                              <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
+                              <li><a href="contact-us.html">Contact Support</a></li>
+                          </ul>
+                          <a class='menu-trigger'>
+                              <span>Menu</span>
+                          </a>
+                          <!-- ***** Menu End ***** -->
+                      </nav>
                   </div>
-                </div>
               </div>
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                <div class="bg-light rounded h-100 p-3">
-                  <div
-                    class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3"
-                  >
-                    <img
-                      class="align-self-center mb-3"
-                      src="img/icon/icon-03-primary.png"
-                      alt=""
-                    />
-                    <h5 class="mb-0">Fast Delivery</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                <div class="bg-light rounded h-100 p-3">
-                  <div
-                    class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3"
-                  >
-                    <img
-                      class="align-self-center mb-3"
-                      src="img/icon/icon-04-primary.png"
-                      alt=""
-                    />
-                    <h5 class="mb-0">Policy Controlling</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                <div class="bg-light rounded h-100 p-3">
-                  <div
-                    class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3"
-                  >
-                    <img
-                      class="align-self-center mb-3"
-                      src="img/icon/icon-07-primary.png"
-                      alt=""
-                    />
-                    <h5 class="mb-0">Money Saving</h5>
+          </div>
+      </header>
+      <!-- ***** Header Area End ***** -->
+
+      <!-- ***** Main Banner Area Start ***** -->
+      <div class="swiper-container" id="top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-inner" style="background-image:url(assets/images/slide-01.jpg)">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="header-text">
+                      <h2>Get <em>ready</em> for your business<br>&amp; upgrade <em>all aspects</em></h2>
+                      <div class="div-dec"></div>
+                      <p>Mexant HTML5 Template is provided for free of charge. This layout is based on Boostrap 5 CSS framework. Anyone can download and edit for any professional website. Thank you for visiting TemplateMo website.</p>
+                      <div class="buttons">
+                        @if (Route::has('login'))
+                        @auth
+                            <div class="green-button">
+                             <a href="{{ url('/admin') }}">Admin</a>
+                            </div>
+                            @else
+                            <div class="green-button">
+                                <a href="{{ route('login') }}">LOGIN</a>
+                            </div>
+                            @if (Route::has('register'))
+                            <div class="orange-button">
+                                <a href="{{ route('register') }}">REGISTRAR</a>
+                              </div>
+                            @endif
+                        @endauth
+                        @endif
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div
-              class="position-relative rounded overflow-hidden h-100"
-              style="min-height: 400px"
-            >
-              <img
-                class="position-absolute w-100 h-100"
-                src="img/feature.jpg"
-                alt=""
-                style="object-fit: cover"
-              />
+          <div class="swiper-slide">
+            <div class="slide-inner" style="background-image:url(assets/images/slide-02.jpg)">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="header-text">
+                      <h2><em>Digital</em> Currency for you <br>&amp; Best <em>Crypto</em> Tips</h2>
+                      <div class="div-dec"></div>
+                      <p>You will see a bunch of free CSS templates when you search on Google. TemplateMo website is probably the best one because it is 100% free. It does not ask you anything in return. You have a total freedom to use any template for any purpose.</p>
+                      <div class="buttons">
+                        @if (Route::has('login'))
+                        @auth
+                            <div class="green-button">
+                             <a href="{{ url('/admin') }}">Admin</a>
+                            </div>
+                            @else
+                            <div class="green-button">
+                                <a href="{{ route('login') }}">LOGIN</a>
+                            </div>
+                            @if (Route::has('register'))
+                            <div class="orange-button">
+                                <a href="{{ route('register') }}">REGISTRAR</a>
+                              </div>
+                            @endif
+                        @endauth
+                        @endif
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slide-inner" style="background-image:url(assets/images/slide-03.jpg)">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="header-text">
+                      <h2>Best One in Town<br>&amp; Crypto <em>Services</em></h2>
+                      <div class="div-dec"></div>
+                      <p>When you browse through different tags on TemplateMo website, you can see a variety of CSS templates which are responsive website designs for different individual needs. Please tell your friends about our website. Thank you.</p>
+                      <div class="buttons">
+                        @if (Route::has('login'))
+                        @auth
+                            <div class="green-button">
+                             <a href="{{ url('/admin') }}">Admin</a>
+                            </div>
+                            @else
+                            <div class="green-button">
+                                <a href="{{ route('login') }}">LOGIN</a>
+                            </div>
+                            @if (Route::has('register'))
+                            <div class="orange-button">
+                                <a href="{{ route('register') }}">REGISTRAR</a>
+                              </div>
+                            @endif
+                        @endauth
+                        @endif
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
       </div>
-    </div>
-    <!-- Features End -->
 
-    <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6">
-            <h1 class="text-white mb-4">
-              <img
-                class="img-fluid me-3"
-                src="img/icon/icon-02-light.png"
-                alt=""
-              />Insure
-            </h1>
-            <p>
-              Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-              ipsum et lorem et sit, sed stet lorem sit clita
-            </p>
-            <div class="d-flex pt-2">
-              <a class="btn btn-square me-1" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-square me-1" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-square me-1" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-square me-0" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Address</h5>
-            <p>
-              <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
-            </p>
-            <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-            <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Quick Links</h5>
-            <a class="btn btn-link" href="">About Us</a>
-            <a class="btn btn-link" href="">Contact Us</a>
-            <a class="btn btn-link" href="">Our Services</a>
-            <a class="btn btn-link" href="">Terms & Condition</a>
-            <a class="btn btn-link" href="">Support</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h5 class="text-light mb-4">Newsletter</h5>
-            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-            <div class="position-relative mx-auto" style="max-width: 400px">
-              <input
-                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-                type="text"
-                placeholder="Your email"
-              />
-              <button
-                type="button"
-                class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2"
-              >
-                SignUp
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid copyright">
+      <!-- ***** Main Banner Area End ***** -->
+
+      <section class="services" id="services">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+            <div class="col-lg-6">
+              <div class="service-item">
+                <i class="fas fa-archive"></i>
+                <h4>CSS Templates</h4>
+                <p>TemplateMo website is the best for you to explore and download free website templates.</p>
+              </div>
             </div>
-            <div class="col-md-6 text-center text-md-end">
-              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-              Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-              <br />Distributed By:
-              <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+            <div class="col-lg-6">
+              <div class="service-item">
+                <i class="fas fa-cloud"></i>
+                <h4>HTML5 Web Pages</h4>
+                <p>Templates are based on Bootstrap 5 CSS framework. You can easily adapt or modify based on your needs.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="service-item">
+                <i class="fas fa-charging-station"></i>
+                <h4>Responsive Designs</h4>
+                <p>All of our CSS templates are 100% free to use for commercial or business websites.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="service-item">
+                <i class="fas fa-suitcase"></i>
+                <h4>Mobile and Tablet ready!</h4>
+                <p>Our HTML CSS templates are well-tested on mobile, tablet, and desktop compatibility.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="service-item">
+                <i class="fas fa-archway"></i>
+                <h4>Fast Customer Support</h4>
+                <p>Do not be hesitated to contact us if you have any question or concern about our templates.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="service-item">
+                <i class="fas fa-puzzle-piece"></i>
+                <h4>Fully Customizable</h4>
+                <p>If you have any idea or suggestion about new templates, feel free to let us know.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Footer End -->
+      </section>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+      <section class="simple-cta">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5">
+              <h4>Business <em>Solutions</em> and <strong>Crypto</strong> Investments</h4>
+            </div>
+            <div class="col-lg-7">
+              <div class="buttons">
+                <div class="green-button">
+                  <a href="#">Discover More</a>
+                </div>
+                <div class="orange-button">
+                  <a href="#">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url('') }}/theme/inicio/lib/wow/wow.min.js"></script>
-    <script src="{{ url('') }}/theme/inicio/lib/easing/easing.min.js"></script>
-    <script src="{{ url('') }}/theme/inicio/lib/waypoints/waypoints.min.js"></script>
-    <script src="{{ url('') }}/theme/inicio/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="{{ url('') }}/theme/inicio/lib/counterup/counterup.min.js"></script>
+      <section class="about-us" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+              <div class="section-heading">
+                <h6>About Us</h6>
+                <h4>Know Us Better</h4>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="naccs">
+                <div class="tabs">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="menu">
+                        <div class="active gradient-border"><span>Web Design</span></div>
+                        <div class="gradient-border"><span>Graphics</span></div>
+                        <div class="gradient-border"><span>Web Coding</span></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <ul class="nacc">
+                        <li class="active">
+                          <div>
+                            <div class="main-list">
+                              <span class="title">Project Title</span>
+                              <span class="title">Budget</span>
+                              <span class="title">Deadline</span>
+                              <span class="title">Client</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">Website Redesign</span>
+                              <span class="item">$1,500 to $2,200</span>
+                              <span class="item">2022 Dec 12</span>
+                              <span class="item">Web Biz</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">Website Renovation</span>
+                              <span class="item">$2,500 to $3,600</span>
+                              <span class="item">2022 Dec 10</span>
+                              <span class="item">Online Ads</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">Marketing Plan</span>
+                              <span class="item">$2,500 to $4,200</span>
+                              <span class="item">2022 Dec 8</span>
+                              <span class="item">Web Biz</span>
+                            </div>
+                            <div class="list-item last-item">
+                              <span class="item item-title">All-new Website</span>
+                              <span class="item">$3,000 to $6,600</span>
+                              <span class="item">2022 Dec 2</span>
+                              <span class="item">Web Presence</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div>
+                            <div class="main-list">
+                              <span class="title">Project Title</span>
+                              <span class="title">Budget</span>
+                              <span class="title">Deadline</span>
+                              <span class="title">Client</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">Graphics Redesign</span>
+                              <span class="item">$500 to $800</span>
+                              <span class="item">2022 Nov 24</span>
+                              <span class="item">Media One</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">Digital Graphics</span>
+                              <span class="item">$1,500 to $3,000</span>
+                              <span class="item">2022 Nov 18</span>
+                              <span class="item">Second Media</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">New Artworks</span>
+                              <span class="item">$2,200 to $4,400</span>
+                              <span class="item">2022 Nov 10</span>
+                              <span class="item">Artwork Push</span>
+                            </div>
+                            <div class="list-item last-item">
+                              <span class="item item-title">Complex Arts</span>
+                              <span class="item">$1,100 to $2,400</span>
+                              <span class="item">2022 Nov 3</span>
+                              <span class="item">Media One</span>
+                            </div>
+                        </li>
+                        <li>
+                          <div>
+                            <div class="main-list">
+                              <span class="title">Project Title</span>
+                              <span class="title">Budget</span>
+                              <span class="title">Estimated</span>
+                              <span class="title">Technology</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">Backend Coding</span>
+                              <span class="item">$2,000 to $5,000</span>
+                              <span class="item">2022 Nov 28</span>
+                              <span class="item">PHP MySQL</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">New Web App</span>
+                              <span class="item">$1,500 to $3,000</span>
+                              <span class="item">2022 Nov 18</span>
+                              <span class="item">Python Programming</span>
+                            </div>
+                            <div class="list-item">
+                              <span class="item item-title">Frontend Interactions</span>
+                              <span class="item">$3,000 to $6,000</span>
+                              <span class="item">2022 Nov 10</span>
+                              <span class="item">JavaScripts</span>
+                            </div>
+                            <div class="list-item last-item">
+                              <span class="item item-title">Video Creations</span>
+                              <span class="item">$1,800 to $4,400</span>
+                              <span class="item">2022 Nov 3</span>
+                              <span class="item">Multimedia</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="right-content">
+                <h4>Please tell us about your idea and how you want it to be</h4>
+                <p>You are allowed to use this template for your websites. You are <b>NOT allowed</b> to redistribute the template ZIP file on any other template websites.<br><br>Thank you for downloading and using our templates. Please tell your friends about our website.</p>
+                <div class="green-button">
+                  <a href="about-us.html">Discover More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Template Javascript -->
-    <script src="{{ url('') }}/theme/inicio/js/main.js"></script>
-  </body>
-</html>
+      <section class="calculator">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="left-image">
+                <img src="assets/images/calculator-image.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="section-heading">
+                <h6>Your Freedom</h6>
+                <h4>Get a Financial Plan</h4>
+              </div>
+              <form id="calculate" action="" method="get">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <label for="name">Your Name</label>
+                      <input type="name" name="name" id="name" placeholder="" autocomplete="on" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <label for="email">Your Email</label>
+                      <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <label for="subject">Subject</label>
+                      <input type="subject" name="subject" id="subject" placeholder="" autocomplete="on" >
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <label for="chooseOption" class="form-label">Your Reason</label>
+                      <select name="Category" class="form-select" aria-label="Default select example" id="chooseOption" onchange="this.form.click()">
+                          <option selected>Choose an Option</option>
+                          <option type="checkbox" name="option1" value="Online Banking">Online Banking</option>
+                          <option value="Financial Control">Financial Control</option>
+                          <option value="Yearly Profit">Yearly Profit</option>
+                          <option value="Crypto Investment">Crypto Investment</option>
+                      </select>
+                  </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="orange-button">Submit Now</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+              <div class="section-heading">
+                <h6>Testimonials</h6>
+                <h4>What They Say</h4>
+              </div>
+            </div>
+            <div class="col-lg-10 offset-lg-1">
+              <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+                <div class="item">
+                  <i class="fa fa-quote-left"></i>
+                  <p>“Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.”</p>
+                  <h4>David Eigenberg</h4>
+                  <span>CEO of Mexant</span>
+                  <div class="right-image">
+                    <img src="assets/images/testimonials-01.jpg" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="fa fa-quote-left"></i>
+                  <p>“Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”</p>
+                  <h4>Andrew Garfield</h4>
+                  <span>CTO of Mexant</span>
+                  <div class="right-image">
+                    <img src="assets/images/testimonials-01.jpg" alt="">
+                  </div>
+                </div>
+                <div class="item">
+                  <i class="fa fa-quote-left"></i>
+                  <p>“Ut dictum vehicula massa, ac pharetra leo tincidunt eu. Phasellus in tristique magna, ac gravida leo. Integer sed lorem sapien. Ut viverra mauris sed lobortis commodo.”</p>
+                  <h4>George Lopez</h4>
+                  <span>Crypto Manager</span>
+                  <div class="right-image">
+                    <img src="assets/images/testimonials-01.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2 col-sm-4 col-6">
+              <div class="item">
+                <img src="assets/images/client-01.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+              <div class="item">
+                <img src="assets/images/client-01.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+              <div class="item">
+                <img src="assets/images/client-01.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+              <div class="item">
+                <img src="assets/images/client-01.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+              <div class="item">
+                <img src="assets/images/client-01.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-6">
+              <div class="item">
+                <img src="assets/images/client-01.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <p>Copyright © 2022 Mexant Co., Ltd. All Rights Reserved.
+
+              <br>Designed by <a title="CSS Templates" rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a> Distributed By <a title="CSS Templates" rel="sponsored" href="https://themewagons.com" target="_blank">ThemeWagon</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+        <script src="{{ url('') }}/theme/inicio/vendor/jquery/jquery.min.js"></script>
+        <script src="{{ url('') }}/theme/inicio/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="{{ url('') }}/theme/inicio/assets/js/isotope.min.js"></script>
+        <script src="{{ url('') }}/theme/inicio/assets/js/owl-carousel.js"></script>
+
+        <script src="{{ url('') }}/theme/inicio/assets/js/tabs.js"></script>
+        <script src="{{ url('') }}/theme/inicio/assets/js/swiper.js"></script>
+        <script src="{{ url('') }}/theme/inicio/assets/js/custom.js"></script>
+        <script>
+            var interleaveOffset = 0.5;
+
+          var swiperOptions = {
+            loop: true,
+            speed: 1000,
+            grabCursor: true,
+            watchSlidesProgress: true,
+            mousewheelControl: true,
+            keyboardControl: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev"
+            },
+            on: {
+              progress: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                  var slideProgress = swiper.slides[i].progress;
+                  var innerOffset = swiper.width * interleaveOffset;
+                  var innerTranslate = slideProgress * innerOffset;
+                  swiper.slides[i].querySelector(".slide-inner").style.transform =
+                    "translate3d(" + innerTranslate + "px, 0, 0)";
+                }
+              },
+              touchStart: function() {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                  swiper.slides[i].style.transition = "";
+                }
+              },
+              setTransition: function(speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                  swiper.slides[i].style.transition = speed + "ms";
+                  swiper.slides[i].querySelector(".slide-inner").style.transition =
+                    speed + "ms";
+                }
+              }
+            }
+          };
+
+          var swiper = new Swiper(".swiper-container", swiperOptions);
+        </script>
+      </body>
+    </html>
