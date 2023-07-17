@@ -157,15 +157,12 @@
                             <div class="green-button">
                              <a href="{{ url('/admin') }}">Admin</a>
                             </div>
-                            @else
                             <div class="green-button">
                                 <a href="{{ route('login') }}">LOGIN</a>
                             </div>
-                            @if (Route::has('register'))
                             <div class="orange-button">
                                 <a href="{{ route('register') }}">REGISTRAR</a>
-                              </div>
-                            @endif
+                            </div>
                         @endauth
                         @endif
                       </div>
